@@ -1,11 +1,23 @@
-# iTerm Alias Setup Instructions
+# iTerm Automation Script
 
-This guide will walk you through the process of integrating custom aliases into your iTerm environment to streamline your development workflow.
+This AppleScript automates the process of running various development commands when switching branches in iTerm. It is designed to save time and streamline the workflow by automatically executing the necessary commands and providing notifications upon completion.
+
+## Overview
+
+The main purpose of this script is to automate the following tasks when switching branches:
+
+1. Run `make dev-sync` command to sync the development environment.
+2. Start the `packer` command in a separate tab to build and package the application.
+3. Start the `web` command in another tab to run the web server.
+4. Check if the Cloudflare tunnel is already running, and if not, start the `cloud` command in a new tab to establish the tunnel.
+
+By automating these tasks, developers can save time and focus on their core development work without manually executing each command whenever they switch branches.
 
 ## Prerequisites
 
 - iTerm2 installed on your macOS system
-- Have four tabs open with cf repo active
+- Have 4 tabs open with cf repo active 
+- Complete Cloudflared tunnel setup
 
 ## Manual Setup Instructions
 
