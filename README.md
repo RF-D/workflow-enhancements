@@ -95,7 +95,7 @@ To enable notifications for the processes in the iTerm2 automation script, utili
        - **Parameters**: Enter `sleep 30 && osascript -e 'display notification "Packer has completed" with title "iTerm2 Notification" sound name "Ping"'`
        - **Instant**: Check this box to trigger the notification immediately.
      - **For web-start processes notifications:**
-       - **Regular Expression**: `backfill-events`
+       - **Regular Expression**: `"backfill-events"`
        - **Action**: Select "Run Command..."
        - **Parameters**: Enter `sleep 5 && osascript -e 'display notification "web-start has completed, Local ENV is now loading" with title "iTerm2 Notification" sound name "Ping"'`
        - **Instant**: Check this box to trigger the notification immediately.
