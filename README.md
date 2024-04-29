@@ -5,7 +5,7 @@ This guide will walk you through the process of integrating custom aliases into 
 ## Prerequisites
 
 - iTerm2 installed on your macOS system
-- Have for tabs open with cf repo active
+- Have four tabs open with cf repo active
 
 ## Manual Setup Instructions
 
