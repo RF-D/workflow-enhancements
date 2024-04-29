@@ -29,31 +29,10 @@ Follow these steps to manually add the provided aliases to your shell profile:
 4. **Update Path to start_sequence.scpt:**
    In the `dsync` alias, replace `/path/to/start_sequence.scpt` with the actual path to your `start_sequence.scpt` file that you downloaded or cloned from the repository. Make sure to provide the correct path to ensure the script is executed properly.
 
-5. **Allow Permissions for start_sequence.scpt (if necessary):**
-   
-
-6. **Review Existing Aliases:**
-   Before saving the file, review any existing aliases you might have in your profile. Modify any that conflict or are duplicated with the new aliases to suit your specific workflow needs.
-
-7. **Save and Close:**
-   Save the changes to your shell profile file and close the text editor.
-
-8. **Apply Changes:**
-   To apply the changes, source your profile file in iTerm or Terminal:
-   - For Bash:
-     ```bash
-     source ~/.bash_profile
-     ```
-   - For Zsh:
-     ```bash
-     source ~/.zshrc
-     ```
-
-9. **Verify Installation:**
-   Test the aliases in iTerm to ensure they work as expected. Simply type the alias name and press enter. For example:
+5. **Update Cloud Alias:**
+   In the `cloud` alias, replace `<port>` with the appropriate port number on which your local server is running, and replace `<tunnel-name>` with the name of your Cloudflare Tunnel. For example:
    ```bash
-   dsync
-
+   alias cloud="cloudflared tunnel run --url http://localhost:3000 my-tunnel"
 ## Aliases Included
 
 Here are the specific alias commands and their associated operations:
@@ -69,7 +48,7 @@ alias packer="make webpacker-start; osascript -e 'display notification \"webpack
 alias web="make web-start; osascript -e 'display notification \"web-start has terminated\" with title \"iTerm2 Notification\" sound name \"Ping\"'"
 
 # Triggers cloudflare tunnel startup and sends a notification when it starts
-alias cloud="make cloud-deploy; osascript -e 'display notification \"cloudflare tunnels have started\" with title \"Deployment Notification\" sound name \"Ping\"'"
+alias cloud="cloudflared tunnel run --url http://localhost:<port> <tunnel-name>""
 
 
 
