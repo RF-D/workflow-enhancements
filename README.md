@@ -52,7 +52,7 @@ Here are the specific alias commands and their associated operations:
 
 ```bash
 # make dev-sync alias that starts automation flow with error checks and notifications
-alias dsync="git pull; if [ \$? -ne 0 ]; then osascript -e 'display notification \"git pull failed\" with title \"Error Notification\" sound name \"Basso\"'; else make dev-sync && osascript -e 'display notification \"make dev-sync has completed\" with title \"iTerm2 Notification\" sound name \"Ping\"' && sleep 1 && touch /tmp/dsync_done && /usr/bin/osascript /path/to/start_sequence.scpt; fi"
+alias dsync="git pull; if [ $? -ne 0 ]; then osascript -e 'display notification \"git pull failed\" with title \"Error Notification\" sound name \"Basso\"'; else bundle exec rails assets:clobber && make dev-sync && osascript -e 'display notification \"make dev-sync has completed\" with title \"iTerm2 Notification\" sound name \"Ping\"' && sleep 1 && touch /tmp/dsync_done && /usr/bin/osascript path/to/start_sequence.scpt; fi"
 
 # Starts webpacker and sends a notification on termination
 alias packer="make webpacker-start; osascript -e 'display notification \"webpacker-start terminated\" with title \"iTerm2 Notification\" sound name \"Ping\"'"
