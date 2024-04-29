@@ -61,7 +61,7 @@ alias packer="make webpacker-start; osascript -e 'display notification \"webpack
 alias web="make web-start; osascript -e 'display notification \"web-start has terminated\" with title \"iTerm2 Notification\" sound name \"Ping\"'"
 
 # Triggers cloudflare tunnel startup 
-alias cloud="cloudflared tunnel run --url http://localhost:<port> <tunnel-name>""
+alias cloud="cloudflared tunnel run --url http://localhost:<port> <tunnel-name>"
 ```
 
 
