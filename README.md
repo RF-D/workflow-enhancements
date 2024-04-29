@@ -64,4 +64,49 @@ alias web="make web-start; osascript -e 'display notification \"web-start has te
 alias cloud="cloudflared tunnel run --url http://localhost:<port> <tunnel-name>""
 
 
+## Additional Notes: Enabling iTerm2 Notifications for Automation Script
+
+To enable notifications for the processes in the iTerm2 automation script, utilize the built-in triggers feature in iTerm2. Here's how to set up notifications for each process:
+
+1. **Open iTerm2 Preferences**:
+   - Access the Preferences from the iTerm2 menu or by pressing `Cmd + ,`.
+
+2. **Navigate to Profiles**:
+   - Go to the "Profiles" tab within the Preferences window.
+
+3. **Select Your Profile**:
+   - Choose the profile you want to modify (e.g., "Default").
+
+4. **Access Advanced Settings**:
+   - Click on the "Advanced" tab within the profile settings.
+
+5. **Edit Triggers**:
+   - Locate the "Triggers" section and click on the "Edit" button.
+
+6. **Add New Triggers**:
+   - Click the "+" button at the bottom left corner to start adding a new trigger.
+
+7. **Configure Triggers**:
+   - Set up notifications for each process as follows:
+     - **For web-packer process notification**
+       - **Regular Expression**: `successfully rebuilt - now reloading`
+       - **Action**: Select "Run Command..."
+       - **Parameters**: Enter `sleep 30 && osascript -e 'display notification "Packer has completed" with title "iTerm2 Notification" sound name "Ping"'`
+       - **Instant**: Check this box to trigger the notification immediately.
+     - **For web-start processes notifications:**
+       - **Regular Expression**: `backfill-events`
+       - **Action**: Select "Run Command..."
+       - **Parameters**: Enter `sleep 5 && osascript -e 'display notification "web-start has completed, Local ENV is now loading" with title "iTerm2 Notification" sound name "Ping"'`
+       - **Instant**: Check this box to trigger the notification immediately.
+
+8. **Save and Close**:
+   - Click on the "Close" button to save your configurations after setting up the triggers.
+
+9. **Apply to Additional Profiles**:
+   - Repeat steps 3-8 for any other profiles you want to configure.
+
+**Outcome of Triggers**:
+- **For web-packer process notification**: A notification "Packer has completed" will appear after a 30-second delay.
+- **For web-start processes notifications**: A notification "web-start has completed, Local ENV is now loading" will appear after a 5-second delay.
+
 
