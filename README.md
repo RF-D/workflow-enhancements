@@ -62,6 +62,7 @@ alias web="make web-start; osascript -e 'display notification \"web-start has te
 
 # Triggers cloudflare tunnel startup 
 alias cloud="cloudflared tunnel run --url http://localhost:<port> <tunnel-name>""
+```
 
 
 ## Additional Notes: Enabling iTerm2 Notifications for Automation Script
