@@ -1,0 +1,35 @@
+#################### Authentication ####################
+enable-two-factor-auth: true
+allow-social-login: false
+password-reset-flow: true
+remember-me-option: true
+
+#################### User Interface ####################
+dark-mode: false
+new-dashboard-layout: true
+beta-features-menu: false
+custom-themes: true
+
+#################### Performance ####################
+enable-caching: true
+lazy-loading: true
+prefetch-resources: false
+compress-images: true
+
+#################### Notifications ####################
+push-notifications: true
+email-digests: false
+in-app-notifications: true
+sms-alerts: false
+
+#################### E-commerce ####################
+one-click-purchase: false
+wishlist-feature: true
+product-recommendations: true
+guest-checkout: false
+
+#################### Analytics ####################
+user-behavior-tracking: true
+a-b-testing: false
+conversion-funnels: true
+heat-maps: false
