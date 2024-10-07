@@ -1,5 +1,4 @@
 #################### Authentication ####################
-enable-two-factor-auth: true
 allow-social-login: false
 password-reset-flow: true
 remember-me-option: true
@@ -33,3 +32,4 @@ user-behavior-tracking: true
 a-b-testing: false
 conversion-funnels: true
 heat-maps: false
+
